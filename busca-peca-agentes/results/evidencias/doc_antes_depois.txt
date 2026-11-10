@@ -1,0 +1,57 @@
+ANTES
+from buscapeca.models import ItemPedido, Pedido
+from buscapeca.repositories.peca_repository import PecaRepository
+from buscapeca.repositories.pedido_repository import PedidoRepository
+
+FRETE_FIXO = 15.0
+LIMITE_FRETE_GRATIS = 300.0
+
+
+class EstoqueInsuficienteError(Exception):
+    pass
+
+
+class PedidoService:
+    def __init__(self, pecas: PecaRepository, pedidos: PedidoRepository):
+        self.pecas = pecas
+        self.pedidos = pedidos
+
+    def calcular_total(self, pedido: Pedido) -> float:
+        subtotal = sum(item.subtotal() for item in pedido.itens)
+        frete = 0.0 if subtotal >= LIMITE_FRETE_GRATIS else FRETE_FIXO
+        return round(subtotal + frete, 2)
+
+    def criar_pedido(self, comprador_id: int, itens: list) -> Pedido:
+        pedido = Pedido(comprador_id=comprador_id)
+
+DEPOIS
+"""Componente da camada de negócio (responsabilidade inferida pela estrutura)."""
+from buscapeca.models import ItemPedido, Pedido
+from buscapeca.repositories.peca_repository import PecaRepository
+from buscapeca.repositories.pedido_repository import PedidoRepository
+
+FRETE_FIXO = 15.0
+LIMITE_FRETE_GRATIS = 300.0
+
+
+class EstoqueInsuficienteError(Exception):
+    """Classe EstoqueInsuficienteError."""
+    pass
+
+
+class PedidoService:
+    """Classe PedidoService."""
+    def __init__(self, pecas: PecaRepository, pedidos: PedidoRepository):
+        self.pecas = pecas
+        self.pedidos = pedidos
+
+    def calcular_total(self, pedido: Pedido) -> float:
+        """Calcular total. Parâmetros: pedido. Retorna: float."""
+        subtotal = sum(item.subtotal() for item in pedido.itens)
+        frete = 0.0 if subtotal >= LIMITE_FRETE_GRATIS else FRETE_FIXO
+        return round(subtotal + frete, 2)
+
+    def criar_pedido(self, comprador_id: int, itens: list) -> Pedido:
+        """Criar pedido. Parâmetros: comprador_id, itens. Retorna: Pedido."""
+        pedido = Pedido(comprador_id=comprador_id)
+        for peca_id, quantidade in itens:

@@ -1,0 +1,114 @@
+{
+  "Documentação": {
+    "cobertura_docstrings_antes": 15.555555555555555,
+    "cobertura_docstrings_depois": 100.0,
+    "acuracia_abnt": 1.0,
+    "abnt": {
+      "vp": 7,
+      "fp": 0,
+      "fn": 0,
+      "precisao": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "modulos_documentados_pct": 100.0,
+    "docstrings_inseridas": 67,
+    "fontes_responsabilidade": {
+      "docstring": 4,
+      "entrevista": 2,
+      "inferida": 4
+    }
+  },
+  "Validação de Código": {
+    "corpus": {
+      "inicial": {
+        "vp": 10,
+        "fp": 2,
+        "fn": 0,
+        "precisao": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "falsos_positivos": [
+          "nomes.py/nomenclatura/p",
+          "nomes.py/nomenclatura/setUp"
+        ],
+        "falsos_negativos": []
+      },
+      "ajustada": {
+        "vp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precisao": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "falsos_positivos": [],
+        "falsos_negativos": []
+      }
+    },
+    "projeto_violacoes_inicial": 6,
+    "projeto_violacoes_ajustada": 0,
+    "antes_depois": {
+      "violacoes_antes": 3,
+      "violacoes_depois": 0,
+      "cc_max_antes": 12,
+      "cc_max_depois": 3,
+      "comportamento_equivalente": true
+    }
+  },
+  "Arquiteto": {
+    "deteccao": {
+      "vp": 7,
+      "fp": 0,
+      "fn": 0,
+      "precisao": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "antes_depois": {
+      "achados_antes": 3,
+      "achados_depois": 0,
+      "status_antes": "reprovado",
+      "status_depois": "aprovado"
+    },
+    "projeto_real_achados": 0
+  },
+  "Code Review": {
+    "deteccao": {
+      "vp": 12,
+      "fp": 1,
+      "fn": 0,
+      "precisao": 0.9230769230769231,
+      "recall": 1.0,
+      "f1": 0.9600000000000001
+    },
+    "acuracia_severidade": 1.0,
+    "achados_com_evidencia_pct": 100.0,
+    "refutacoes_corretas": "2/2",
+    "somente_leitura_ok": true,
+    "por_severidade": {
+      "Extra High": 2,
+      "High": 4,
+      "Medium": 4,
+      "Low": 1,
+      "Advice": 2
+    },
+    "projeto_real_achados": 0
+  },
+  "Testes (QualityBridge)": {
+    "fidelidade_contagens_pct": 100.0,
+    "tempo_completa_ms": 312.3654796000011,
+    "tempo_rapida_ms": 255.6621702000001,
+    "tempo_oraculo_ms": 246.49306039999672,
+    "overhead_ms": 65.87241920000437,
+    "reducao_rapida_pct": 18.15287318964064,
+    "testes_projeto": 21
+  },
+  "_ambiente": {
+    "python": "3.12.3",
+    "so": "Linux 6.18.44-fc-v338",
+    "cpu": "x86_64",
+    "data": "2026-11-10T17:21:17",
+    "repeticoes": 30,
+    "repeticoes_qb": 10
+  }
+}

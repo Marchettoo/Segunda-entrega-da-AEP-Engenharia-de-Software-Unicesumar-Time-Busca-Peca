@@ -1,0 +1,5 @@
+$ python -m agents.qualitybridge.agente run --config qualitybridge.yaml
+  suíte unitarios    [unittest] executada    16 testes 
+  suíte integracao   [unittest] executada    5 testes 
+  suíte e2e-web      [playwright] indisponivel 0 testes ferramenta 'playwright' não instalada no ambiente
+[QualityBridge] PASSOU — total 21 | passou 21 | falhou 0 | erro 0 | 0.28s | relatórios em qb_relatorios/

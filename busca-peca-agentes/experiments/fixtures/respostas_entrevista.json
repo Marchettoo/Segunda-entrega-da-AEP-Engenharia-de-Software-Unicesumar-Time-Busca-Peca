@@ -1,0 +1,3 @@
+{"proposito": "Marketplace que conecta oficinas mecânicas para compra e venda de peças novas, usadas e excedentes de estoque, reduzindo desperdício (ODS 12).",
+ "buscapeca/repositories/conexao.py": "Cria a conexão SQLite e o esquema mínimo do MVP.",
+ "buscapeca/repositories/pedido_repository.py": "Persiste pedidos e atualiza seu status."}

@@ -1,0 +1,16 @@
+[
+ {"ref": "BASS, L.; CLEMENTS, P.; KAZMAN, R. Software architecture in practice. 3. ed. Boston: Addison-Wesley, 2012.", "valida": true},
+ {"ref": "GAMMA, E. et al. Padrões de projeto: soluções reutilizáveis de software orientado a objetos. Porto Alegre: Bookman, 2000.", "valida": true},
+ {"ref": "LARMAN, C. Utilizando UML e padrões. 3. ed. Porto Alegre: Bookman, 2007.", "valida": true},
+ {"ref": "SOMMERVILLE, I. Engenharia de software. 10. ed. São Paulo: Pearson, 2018.", "valida": true},
+ {"ref": "SCHWABER, K.; SUTHERLAND, J. The Scrum Guide. 2020. Disponível em: https://scrumguides.org. Acesso em: 10 nov. 2026.", "valida": true},
+ {"ref": "ONU. Transformando nosso mundo: a Agenda 2030 para o desenvolvimento sustentável. Nova York: ONU, 2015.", "valida": true},
+ {"ref": "PMI. A guide to the project management body of knowledge (PMBOK guide). 7. ed. Newtown Square: PMI, 2021.", "valida": true},
+ {"ref": "Bass, Len. Software architecture in practice. Boston: Addison-Wesley, 2012.", "valida": false},
+ {"ref": "GAMMA, E. Design patterns.", "valida": false},
+ {"ref": "LARMAN, C. Utilizando UML e padrões. 3ª edição. Porto Alegre: Bookman, 2007.", "valida": false},
+ {"ref": "SOMMERVILLE, I. Engenharia de software. São Paulo: Pearson.", "valida": false},
+ {"ref": "https://refactoring.guru/design-patterns", "valida": false},
+ {"ref": "SCHWABER, K. The Scrum Guide. Disponível em: https://scrumguides.org.", "valida": false},
+ {"ref": "PRESSMAN, R. Engenharia de software. 8 ed. Porto Alegre: AMGH, 2016.", "valida": false}
+]

@@ -1,0 +1,47 @@
+agente;caso;tipo;cenario;esperado;obtido;passou;n_rep;tempo_medio_ms;tempo_dp_ms;tempo_mediana_ms;pico_memoria_kb
+Documentação;DOC-01;típico;Coleta: inventário de módulos, classes e funções públicas do projeto;45 elementos (oráculo regex);45 elementos inventariados;True;30;2.935;0.305;2.855;225.7
+Documentação;DOC-02;típico;Pipeline completo: views técnica e didática do mesmo código;2 views geradas, 100% dos módulos citados, 0 lacunas de formato/completude;2 views, 10/10 módulos citados, 0 lacunas estruturais;True;30;17.211;2.717;16.127;286.4
+Documentação;DOC-03;típico;Inserção de docstrings preservando o comportamento do código;cobertura = 100% e 21/21 testes do projeto passando;"cobertura 15.6% → 100.0%; testes OK (67 docstrings)";True;30;17.211;2.717;16.127;286.4
+Documentação;DOC-04;típico;Validador ABNT sobre 14 referências rotuladas (7 válidas, 7 inválidas);acurácia ≥ 90%;14/14 classificadas corretamente (100%);True;30;0.026;0.007;0.024;1.4
+Documentação;DOC-05;borda;Repositório vazio (sem nenhum arquivo .py);pipeline conclui sem exceção e registra lacuna 'nenhum módulo';status 'gravado', 1 lacuna(s) registrada(s);True;30;0.382;0.071;0.364;11.1
+Documentação;DOC-06;borda;Arquivo com erro de sintaxe no meio do repositório;erro registrado em lacunas e 10 módulos válidos documentados;"lacuna de coleta registrada; 10 módulos documentados";True;30;16.481;1.49;16.167;290.5
+Documentação;DOC-07;borda;8 módulos sem docstring e sem README (9 perguntas possíveis);entrevista limitada a no máximo 5 perguntas;5 perguntas feitas;True;30;3.192;0.163;3.181;55.1
+Documentação;DOC-08;borda;Portão humano 1 reprova o esqueleto;pipeline interrompido sem gravar artefatos;"status 'interrompido no portão 1'; artefatos gravados: False";True;30;2.921;0.125;2.88;226.3
+Validação de Código;VAL-01;típico;Função com complexidade ciclomática acima do limite (10);violação 'complexidade' em classificar_frete (CC=11);"CC medida=11; 1 violação(ões) de complexidade";True;30;3.136;0.156;3.096;114.3
+Validação de Código;VAL-02;borda;Função exatamente no limite (CC=10) e função com exatamente 30 linhas;nenhuma violação (limite inclusivo);"classificar_peca CC=10: não reportada; montar_resumo: não reportada";True;30;3.136;0.156;3.096;114.3
+Validação de Código;VAL-03;típico;Bloco de código duplicado com nomes de variáveis diferentes (DRY);1 violação 'duplicacao' em total_pedido_online;1 duplicação(ões): total_pedido_online;True;30;1.526;0.172;1.462;63.5
+Validação de Código;VAL-04;típico;"Nomenclatura: camelCase, classe minúscula, variável 'x'; setUp e compreensão válidos";3 violações, 0 falsos positivos;3 violações: calcularTotal, item_pedido, x;True;30;0.651;0.076;0.631;79.6
+Validação de Código;VAL-05;típico;Função com 34 linhas e função com 7 parâmetros;violações 'tamanho' e 'parametros';2 violações: parametros:cadastrar_anuncio, tamanho:gerar_relatorio_estoque;True;30;4.622;0.071;4.606;485.0
+Validação de Código;VAL-06;típico;Código limpo (controle de falso positivo);0 violações;0 violações;True;30;0.67;0.084;0.652;80.7
+Validação de Código;VAL-07;borda;Arquivo vazio;0 violações, sem erro;0 violações, 0 erros;True;30;0.032;0.015;0.027;25.5
+Validação de Código;VAL-08;borda;Arquivo com sintaxe inválida junto de arquivo válido;erro controlado no inválido e análise normal do válido;"erros: ['quebrado.py: sintaxe inválida na linha 1']; 3 violações no arquivo válido";True;30;2.738;0.148;2.699;90.1
+Validação de Código;VAL-09;típico;Decorator: regra opcional de número mágico acoplada em tempo de execução;3 violações base + ≥1 'numero_magico';3 base + 2 número(s) mágico(s);True;30;2.861;0.087;2.846;89.6
+Validação de Código;VAL-10;borda;Evento de webhook com arquivos não-Python (.md, .png);apenas o .py analisado (3 violações);"3 violações; relatório com 788 caracteres";True;30;2.528;0.106;2.503;88.9
+Arquiteto;ARQ-01;típico;PR conforme: controller→service e service→repository;0 violação(ões);status 'aprovado', 0 achado(s);True;30;0.092;0.033;0.08;28.3
+Arquiteto;ARQ-02;típico;Controller importando repositório diretamente (pula a camada de negócio);1 violação(ões): R1-dependencia-entre-camadas;status 'reprovado', 1 achado(s): R1-dependencia-entre-camadas;True;30;0.033;0.008;0.03;26.9
+Arquiteto;ARQ-03;típico;SQL embutido na camada de negócio;1 violação(ões): R2-sql-fora-da-persistencia;status 'reprovado', 1 achado(s): R2-sql-fora-da-persistencia;True;30;0.048;0.023;0.042;28.2
+Arquiteto;ARQ-04;típico;Primitiva criptográfica (hashlib) usada fora da camada de segurança;1 violação(ões): R3-cripto-fora-da-seguranca;status 'reprovado', 1 achado(s): R3-cripto-fora-da-seguranca;True;30;0.054;0.011;0.051;28.2
+Arquiteto;ARQ-05;típico;Dependência invertida: repositório importando controller;1 violação(ões): R1-dependencia-entre-camadas;status 'reprovado', 1 achado(s): R1-dependencia-entre-camadas;True;30;0.035;0.011;0.031;26.9
+Arquiteto;ARQ-06;borda;Import relativo (from ..repositories) que esconde a violação;1 violação(ões): R1-dependencia-entre-camadas;status 'reprovado', 1 achado(s): R1-dependencia-entre-camadas;True;30;0.034;0.008;0.031;26.8
+Arquiteto;ARQ-07;borda;Infraestrutura: DDL fora de migrations/ e porta do banco exposta no manifesto;2 violação(ões): R4-ddl-fora-de-migracoes, R5-banco-exposto;status 'reprovado', 2 achado(s): R4-ddl-fora-de-migracoes, R5-banco-exposto;True;30;0.027;0.038;0.019;2.9
+Arquiteto;ARQ-08;borda;PR com arquivos de tipo não suportado (.md, .png);arquivos ignorados com aviso, 0 achados;2 ignorado(s), 0 achado(s);True;30;0.055;0.014;0.05;28.2
+Arquiteto;ARQ-09;típico;Strategy 'Orientação' aplicada à mesma violação do ARQ-02;status 'aprovado com avisos' e severidade AVISO;status 'aprovado com avisos', severidade AVISO;True;30;0.032;0.009;0.03;26.9
+Arquiteto;ARQ-10;borda;Webhook HTTP com payload malformado;HTTP 400 com mensagem de erro;HTTP 400: payload deve conter 'pull_request' e lista 'files';True;30;1.982;6.843;0.769;29.6
+Arquiteto;ARQ-11;típico;Webhook HTTP real (microsserviço) com PR de 2 arquivos violando regras;HTTP 200, status 'reprovado', 2 achados;HTTP 200, status 'reprovado', 2 achados;True;30;1.066;0.166;1.052;52.7
+Code Review;CR-01;típico;Injeção de SQL via f-string e via concatenação;2 achados Extra High (linhas 7 e 11);L7:Extra High, L11:Extra High;True;30;0.956;0.219;0.89;65.0
+Code Review;CR-02;borda;f-string SQL que interpola apenas constante do módulo (TABELA);hipótese refutada, não reportada como achado;linha 15 refutada;True;30;0.956;0.219;0.89;65.0
+Code Review;CR-03;típico;Segredos hardcoded, MD5 e subprocess com shell=True;3 High + 1 Medium;4 achados: 3 High, 1 Medium;True;30;0.764;0.053;0.744;55.6
+Code Review;CR-04;típico;Correção: default mutável, except genérico, == None, eval e print;5 achados (Medium, Medium, Low, High, Advice);"6 achados; extras: L31:COR-EXCEPT-SILENCIOSO";False;30;0.976;0.06;0.961;99.7
+Code Review;CR-05;borda;Linha com supressão explícita '# nosec' revisada;hipótese refutada;linha 36 refutada;True;30;0.976;0.06;0.961;99.7
+Code Review;CR-06;borda;except KeyError: pass após log (exceção específica, aceitável);não reportar;reportado como Medium (falso positivo);False;30;0.976;0.06;0.961;99.7
+Code Review;CR-07;borda;Senha fictícia em arquivo de teste;rebaixado para Advice com refutação parcial;Advice (conf. 0.42);True;30;0.684;0.063;0.659;41.4
+Code Review;CR-08;típico;Código limpo (controle de falso positivo);0 achados;0 achados;True;30;0.433;0.102;0.407;80.7
+Code Review;CR-09;borda;"Projeto completo com 1 arquivo de sintaxe inválida; verificação de somente leitura";erro registrado, demais arquivos revisados, hashes SHA-256 idênticos antes/depois;1 erro(s), 13 achados, somente leitura: True;True;30;1.83;0.282;1.722;105.4
+Testes (QualityBridge);QB-01;típico;Estratégia completa a partir do qualitybridge.yaml;21 testes e 0 falhas (oráculo: unittest direto);21 testes, 0 falhas, status PASSOU;True;10;312.365;19.8;308.399;67.2
+Testes (QualityBridge);QB-02;típico;Strategy 'rápida' (somente suítes marcadas como rápidas);16 testes unitários, sem integração;16 testes em 1 suíte(s);True;10;255.662;29.499;253.416;62.3
+Testes (QualityBridge);QB-03;típico;Relatório HTML/JSON/JUnit consolidado sem perda de informação;totais idênticos nos 3 formatos;HTML 21/21, JSON 21/21, JUnit tests=21;True;10;0.065;0.132;0.018;21.6
+Testes (QualityBridge);QB-04;típico;Persistência do histórico de execuções em SQLite local;+4 registros (3 medições + 1 execução de memória);23 → 27 registros (+4);True;3;300.187;45.84;274.361;66.8
+Testes (QualityBridge);QB-05;borda;YAML de configuração com sintaxe inválida;erro controlado, código de saída 2;código de saída 2;True;10;0.542;0.233;0.46;22.6
+Testes (QualityBridge);QB-06;borda;Suíte com 1 teste de regressão falhando;status FALHOU, 1 falha listada, JUnit failures=1;status FALHOU, falhas: ['test_fator_usada_regrediu'], JUnit failures=1;True;10;302.837;30.606;296.235;67.4
+Testes (QualityBridge);QB-07;borda;Executor Playwright indisponível no ambiente (Factory Method);suíte marcada 'indisponível' sem interromper as demais;"1 suíte indisponível; 21 testes executados nas demais";True;30;0.036;0.017;0.031;2.3
+Testes (QualityBridge);QB-08;borda;Suíte configurada sem nenhum teste;0 testes, status PASSOU, sem exceção;0 testes, status PASSOU;True;10;44.445;1.217;44.152;61.6

@@ -1,0 +1,15 @@
+projeto: Busca Peça
+raiz: .
+saida: qb_relatorios
+banco: qualitybridge.db
+suites:
+  - nome: unitarios
+    executor: unittest
+    caminho: tests/unit
+    rapida: true
+  - nome: integracao
+    executor: unittest
+    caminho: tests/integration
+  - nome: e2e-web
+    executor: playwright
+    caminho: e2e

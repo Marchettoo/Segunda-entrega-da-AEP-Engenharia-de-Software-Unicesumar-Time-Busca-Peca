@@ -1,0 +1,12 @@
+[
+ {"arquivo": "complexo.py", "regra": "complexidade", "simbolo": "classificar_frete"},
+ {"arquivo": "duplicado.py", "regra": "duplicacao", "simbolo": "total_pedido_online"},
+ {"arquivo": "nomes.py", "regra": "nomenclatura", "simbolo": "calcularTotal"},
+ {"arquivo": "nomes.py", "regra": "nomenclatura", "simbolo": "item_pedido"},
+ {"arquivo": "nomes.py", "regra": "nomenclatura", "simbolo": "x"},
+ {"arquivo": "grande.py", "regra": "tamanho", "simbolo": "gerar_relatorio_estoque"},
+ {"arquivo": "grande.py", "regra": "parametros", "simbolo": "cadastrar_anuncio"},
+ {"arquivo": "misto.py", "regra": "nomenclatura", "simbolo": "processarPedido"},
+ {"arquivo": "misto.py", "regra": "parametros", "simbolo": "processarPedido"},
+ {"arquivo": "misto.py", "regra": "complexidade", "simbolo": "processarPedido"}
+]

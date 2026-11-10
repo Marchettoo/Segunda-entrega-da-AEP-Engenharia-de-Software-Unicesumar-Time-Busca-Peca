@@ -1,0 +1,22 @@
+{"positivos": [
+  {"arquivo": "app/busca_repo.py", "regra": "SEC-SQL-INJECTION", "linha": 7, "severidade": "Extra High"},
+  {"arquivo": "app/busca_repo.py", "regra": "SEC-SQL-INJECTION", "linha": 11, "severidade": "Extra High"},
+  {"arquivo": "app/config.py", "regra": "SEC-SEGREDO-HARDCODED", "linha": 4, "severidade": "High"},
+  {"arquivo": "app/config.py", "regra": "SEC-SEGREDO-HARDCODED", "linha": 5, "severidade": "High"},
+  {"arquivo": "app/config.py", "regra": "SEC-HASH-FRACO", "linha": 10, "severidade": "Medium"},
+  {"arquivo": "app/config.py", "regra": "SEC-SHELL", "linha": 14, "severidade": "High"},
+  {"arquivo": "app/pedidos.py", "regra": "COR-DEFAULT-MUTAVEL", "linha": 6, "severidade": "Medium"},
+  {"arquivo": "app/pedidos.py", "regra": "COR-EXCEPT-SILENCIOSO", "linha": 14, "severidade": "Medium"},
+  {"arquivo": "app/pedidos.py", "regra": "COR-COMPARACAO-NONE", "linha": 19, "severidade": "Low"},
+  {"arquivo": "app/pedidos.py", "regra": "SEC-EVAL", "linha": 25, "severidade": "High"},
+  {"arquivo": "app/pedidos.py", "regra": "QUA-PRINT", "linha": 33, "severidade": "Advice"},
+  {"arquivo": "tests/test_config.py", "regra": "SEC-SEGREDO-HARDCODED", "linha": 3, "severidade": "Advice"}
+ ],
+ "devem_ser_refutados": [
+  {"arquivo": "app/busca_repo.py", "regra": "SEC-SQL-INJECTION", "linha": 15, "motivo": "interpolação apenas de constante"},
+  {"arquivo": "app/pedidos.py", "regra": "COR-DEFAULT-MUTAVEL", "linha": 36, "motivo": "nosec revisado"}
+ ],
+ "nao_sao_problema": [
+  {"arquivo": "app/pedidos.py", "linha": 31, "descricao": "except KeyError: pass — exceção específica com log antes; aceitável"}
+ ]
+}
